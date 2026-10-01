@@ -1,0 +1,724 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family:
+    Inter,
+    -apple-system,
+    BlinkMacSystemFont,
+    "Segoe UI",
+    Roboto,
+    Arial,
+    sans-serif;
+
+  background: #f8fafc;
+  color: #111827;
+  line-height: 1.5;
+}
+
+button,
+input,
+select,
+textarea {
+  font: inherit;
+}
+
+button {
+  cursor: pointer;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+img {
+  max-width: 100%;
+  display: block;
+}
+
+.container {
+  width: min(1180px, 92%);
+  margin: 0 auto;
+}
+
+/* =========================
+   COMMON
+========================= */
+
+.section {
+  padding: 80px 0;
+}
+
+.section-title {
+  text-align: center;
+  max-width: 720px;
+  margin: 0 auto 45px;
+}
+
+.section-title h2 {
+  font-size: 36px;
+  line-height: 1.2;
+  margin-bottom: 12px;
+}
+
+.section-title p {
+  color: #64748b;
+  font-size: 17px;
+}
+
+/* =========================
+   BUTTONS
+========================= */
+
+.btn {
+  border: none;
+  border-radius: 10px;
+  padding: 13px 22px;
+  font-weight: 700;
+  transition: 0.2s ease;
+}
+
+.btn:hover {
+  transform: translateY(-1px);
+}
+
+.btn-primary {
+  background: #2563eb;
+  color: white;
+}
+
+.btn-primary:hover {
+  background: #1d4ed8;
+}
+
+.btn-secondary {
+  background: white;
+  color: #2563eb;
+  border: 1px solid #2563eb;
+}
+
+.btn-secondary:hover {
+  background: #eff6ff;
+}
+
+/* =========================
+   NAVBAR
+========================= */
+
+.navbar {
+  background: white;
+  border-bottom: 1px solid #e5e7eb;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+}
+
+.navbar-inner {
+  min-height: 70px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 25px;
+}
+
+.logo {
+  font-size: 22px;
+  font-weight: 800;
+  color: #1d4ed8;
+}
+
+.nav-links {
+  display: flex;
+  align-items: center;
+  gap: 25px;
+}
+
+.nav-links a {
+  font-size: 15px;
+  font-weight: 600;
+  color: #334155;
+}
+
+.nav-links a:hover {
+  color: #2563eb;
+}
+
+/* =========================
+   HERO
+========================= */
+
+.hero {
+  padding: 75px 0;
+  background: linear-gradient(
+    135deg,
+    #eff6ff 0%,
+    #ffffff 55%,
+    #f0fdf4 100%
+  );
+}
+
+.hero-grid {
+  display: grid;
+  grid-template-columns: 1.15fr 0.85fr;
+  gap: 55px;
+  align-items: center;
+}
+
+.hero-badge {
+  display: inline-block;
+  padding: 7px 13px;
+  border-radius: 30px;
+  background: #dbeafe;
+  color: #1d4ed8;
+  font-size: 13px;
+  font-weight: 700;
+  margin-bottom: 18px;
+}
+
+.hero h1 {
+  font-size: 52px;
+  line-height: 1.08;
+  letter-spacing: -1px;
+  margin-bottom: 20px;
+}
+
+.hero h1 span {
+  color: #2563eb;
+}
+
+.hero-description {
+  color: #64748b;
+  font-size: 18px;
+  max-width: 620px;
+  margin-bottom: 28px;
+}
+
+.hero-buttons {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+}
+
+.hero-card {
+  background: white;
+  border-radius: 20px;
+  padding: 28px;
+  box-shadow: 0 20px 50px rgba(15, 23, 42, 0.1);
+  border: 1px solid #e5e7eb;
+}
+
+.hero-card h3 {
+  margin-bottom: 8px;
+  font-size: 23px;
+}
+
+.hero-card p {
+  color: #64748b;
+  margin-bottom: 20px;
+}
+
+/* =========================
+   PRODUCT CARDS
+========================= */
+
+.product-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 25px;
+}
+
+.product-card {
+  background: white;
+  border: 1px solid #e5e7eb;
+  border-radius: 18px;
+  padding: 30px;
+  transition: 0.2s ease;
+}
+
+.product-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 15px 35px rgba(15, 23, 42, 0.08);
+}
+
+.product-card h3 {
+  font-size: 24px;
+  margin-bottom: 10px;
+}
+
+.product-card p {
+  color: #64748b;
+  margin-bottom: 18px;
+}
+
+.product-list {
+  list-style: none;
+  display: grid;
+  gap: 10px;
+  margin-bottom: 22px;
+}
+
+.product-list li {
+  color: #334155;
+}
+
+.product-list li::before {
+  content: "✓";
+  color: #16a34a;
+  font-weight: 800;
+  margin-right: 8px;
+}
+
+/* =========================
+   FORM
+========================= */
+
+.form-section {
+  background: #f1f5f9;
+}
+
+.form-card {
+  max-width: 850px;
+  margin: auto;
+  background: white;
+  padding: 35px;
+  border-radius: 20px;
+  box-shadow: 0 15px 40px rgba(15, 23, 42, 0.07);
+}
+
+.form-header {
+  margin-bottom: 28px;
+}
+
+.form-header h2 {
+  font-size: 30px;
+  margin-bottom: 8px;
+}
+
+.form-header p {
+  color: #64748b;
+}
+
+.form-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 18px;
+}
+
+.form-group {
+  display: flex;
+  flex-direction: column;
+  gap: 7px;
+}
+
+.form-group.full {
+  grid-column: 1 / -1;
+}
+
+.form-group label {
+  font-weight: 650;
+  font-size: 14px;
+  color: #334155;
+}
+
+.form-group input,
+.form-group select,
+.form-group textarea {
+  width: 100%;
+  border: 1px solid #cbd5e1;
+  border-radius: 9px;
+  padding: 12px 13px;
+  outline: none;
+  background: white;
+  color: #111827;
+}
+
+.form-group input:focus,
+.form-group select:focus,
+.form-group textarea:focus {
+  border-color: #2563eb;
+  box-shadow: 0 0 0 3px rgba(37, 99, 235, 0.1);
+}
+
+.consent {
+  display: flex;
+  gap: 9px;
+  align-items: flex-start;
+  margin: 20px 0;
+  font-size: 13px;
+  color: #64748b;
+}
+
+.consent input {
+  margin-top: 4px;
+}
+
+.form-submit {
+  width: 100%;
+}
+
+/* =========================
+   CALCULATOR
+========================= */
+
+.calculator {
+  background: white;
+  border-radius: 18px;
+  padding: 30px;
+  border: 1px solid #e5e7eb;
+}
+
+.calculator h3 {
+  font-size: 25px;
+  margin-bottom: 8px;
+}
+
+.calculator-description {
+  color: #64748b;
+  margin-bottom: 25px;
+}
+
+.calculator-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 20px;
+}
+
+.calculator-result {
+  margin-top: 25px;
+  padding: 20px;
+  background: #eff6ff;
+  border-radius: 12px;
+}
+
+.calculator-result span {
+  color: #64748b;
+  font-size: 14px;
+}
+
+.calculator-result strong {
+  display: block;
+  color: #1d4ed8;
+  font-size: 30px;
+  margin-top: 3px;
+}
+
+/* =========================
+   BENEFITS
+========================= */
+
+.benefits-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 22px;
+}
+
+.benefit-card {
+  background: white;
+  padding: 25px;
+  border-radius: 15px;
+  border: 1px solid #e5e7eb;
+}
+
+.benefit-number {
+  width: 42px;
+  height: 42px;
+  display: grid;
+  place-items: center;
+  border-radius: 50%;
+  background: #dbeafe;
+  color: #2563eb;
+  font-weight: 800;
+  margin-bottom: 15px;
+}
+
+.benefit-card h3 {
+  margin-bottom: 8px;
+}
+
+.benefit-card p {
+  color: #64748b;
+}
+
+/* =========================
+   HOW IT WORKS
+========================= */
+
+.steps {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 18px;
+}
+
+.step {
+  text-align: center;
+  padding: 20px;
+}
+
+.step-number {
+  width: 50px;
+  height: 50px;
+  margin: 0 auto 15px;
+  display: grid;
+  place-items: center;
+  background: #2563eb;
+  color: white;
+  border-radius: 50%;
+  font-weight: 800;
+}
+
+.step p {
+  color: #64748b;
+  font-size: 14px;
+}
+
+/* =========================
+   FAQ
+========================= */
+
+.faq-list {
+  max-width: 850px;
+  margin: auto;
+  display: grid;
+  gap: 12px;
+}
+
+.faq-item {
+  background: white;
+  border: 1px solid #e5e7eb;
+  border-radius: 12px;
+  padding: 20px;
+}
+
+.faq-question {
+  font-weight: 700;
+  margin-bottom: 7px;
+}
+
+.faq-answer {
+  color: #64748b;
+}
+
+/* =========================
+   FOOTER
+========================= */
+
+.footer {
+  background: #0f172a;
+  color: white;
+  padding: 45px 0 25px;
+}
+
+.footer-grid {
+  display: grid;
+  grid-template-columns: 1.5fr 1fr 1fr;
+  gap: 40px;
+}
+
+.footer h3 {
+  margin-bottom: 12px;
+}
+
+.footer p,
+.footer a {
+  color: #cbd5e1;
+  font-size: 14px;
+}
+
+.footer-links {
+  display: grid;
+  gap: 8px;
+}
+
+.footer-bottom {
+  border-top: 1px solid #334155;
+  margin-top: 35px;
+  padding-top: 20px;
+  color: #94a3b8;
+  font-size: 13px;
+}
+
+/* =========================
+   THANK YOU
+========================= */
+
+.thank-you {
+  min-height: 100vh;
+  display: grid;
+  place-items: center;
+  padding: 30px;
+}
+
+.thank-you-card {
+  width: min(550px, 100%);
+  text-align: center;
+  background: white;
+  padding: 45px 30px;
+  border-radius: 20px;
+  box-shadow: 0 15px 40px rgba(15, 23, 42, 0.08);
+}
+
+.thank-you-icon {
+  font-size: 50px;
+  margin-bottom: 15px;
+}
+
+.thank-you-card h1 {
+  margin-bottom: 10px;
+}
+
+.thank-you-card p {
+  color: #64748b;
+  margin-bottom: 25px;
+}
+
+/* =========================
+   ADMIN
+========================= */
+
+.admin-page {
+  padding: 40px 0;
+}
+
+.admin-table-wrapper {
+  overflow-x: auto;
+  background: white;
+  border-radius: 15px;
+  border: 1px solid #e5e7eb;
+}
+
+.admin-table {
+  width: 100%;
+  border-collapse: collapse;
+  min-width: 850px;
+}
+
+.admin-table th,
+.admin-table td {
+  text-align: left;
+  padding: 13px 15px;
+  border-bottom: 1px solid #e5e7eb;
+}
+
+.admin-table th {
+  background: #f8fafc;
+  font-size: 14px;
+}
+
+/* =========================
+   MOBILE
+========================= */
+
+@media (max-width: 900px) {
+  .hero-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .hero h1 {
+    font-size: 43px;
+  }
+
+  .benefits-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .steps {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .footer-grid {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+@media (max-width: 700px) {
+  .section {
+    padding: 55px 0;
+  }
+
+  .navbar-inner {
+    min-height: 62px;
+  }
+
+  .nav-links {
+    display: none;
+  }
+
+  .hero {
+    padding: 50px 0;
+  }
+
+  .hero h1 {
+    font-size: 36px;
+  }
+
+  .hero-description {
+    font-size: 16px;
+  }
+
+  .hero-buttons {
+    flex-direction: column;
+  }
+
+  .hero-buttons .btn {
+    width: 100%;
+  }
+
+  .product-grid,
+  .form-grid,
+  .calculator-grid,
+  .benefits-grid,
+  .steps,
+  .footer-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .section-title h2 {
+    font-size: 29px;
+  }
+
+  .form-card {
+    padding: 22px 18px;
+  }
+
+  .form-header h2 {
+    font-size: 25px;
+  }
+
+  .product-card {
+    padding: 22px;
+  }
+
+  .hero-card {
+    padding: 22px;
+  }
+}
+
+@media (max-width: 420px) {
+  .container {
+    width: 94%;
+  }
+
+  .hero h1 {
+    font-size: 31px;
+  }
+
+  .hero-card {
+    padding: 18px;
+  }
+
+  .calculator {
+    padding: 20px;
+  }
+
+  .btn {
+    padding: 12px 17px;
+  }
+}
